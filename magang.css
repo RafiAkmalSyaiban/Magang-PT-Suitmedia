@@ -1,0 +1,123 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  padding-top: 80px; /* Untuk header tetap */
+}
+
+/* Header */
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+header .logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header .logo img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+header nav a.active {
+  color: orange;
+  font-weight: bold;
+}
+
+/* Banner */
+.banner {
+  background: url('bangunan.png') no-repeat center/cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.banner-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.controls select {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.post-card img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+}
+
+.post-content {
+  padding: 15px;
+}
+
+.post-title {
+  font-weight: bold;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  height: 3.6em; /* kira-kira 3 baris */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
